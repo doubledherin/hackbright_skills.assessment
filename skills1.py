@@ -37,7 +37,11 @@ def smallest(number_list):
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
-    return None
+    max = number_list[0]
+    for num in number_list:
+        if num > max:
+            max = num
+    return max
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
