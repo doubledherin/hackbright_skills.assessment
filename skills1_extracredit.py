@@ -4,22 +4,14 @@ number_list = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
 word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "and", "spam"]
 
 # Write a function that takes a list of numbers and returns a new list with only the odd numbers.
-def all_odd(number_list):
-    newlist = []
-    for num in number_list:
-        if num % 2 != 0:
-            newlist.append(num)
-    return newlist
+f_all_odd = filter(lambda num: num % 2 != 0, number_list)
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
-def all_even(number_list):
-    newlist = []
-    for num in number_list:
-        if num % 2 == 0:
-            newlist.append(num)
-    return newlist
+f_all_even = filter(lambda num: num % 2 == 0, number_list)
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
+f_long_words = filter(lambda word: len(word) > 3, word_list)
+
 def long_words(word_list):
     newlist = []
     for word in word_list:
