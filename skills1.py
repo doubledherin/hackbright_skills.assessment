@@ -52,20 +52,33 @@ def halvesies(number_list):
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    return []
+    newlist = []
+    for word in word_list:
+        newlist.append(len(word))
+    return newlist
 
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
-    return 0
+    sum = 0
+    for num in number_list:
+        sum += num
+    return sum
 
 # Write a function that multiplies all the numbers in a list together.
 def mult_numbers(number_list):
-    return 0
+    product = 1
+    for num in number_list:
+        product *= num
+    return product
 
-# Write a function that joins all the strings in a list together (without using the join method) and returns a single string.
+# Write a function that joins all the strings in a list together (without using the join method) and 
+# returns a single string.
 def join_strings(word_list):
-    return ""
+    newstring = ""
+    for word in word_list:
+        newstring += word
+    return newstring
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
-    return 0
+    return sum_numbers(number_list) / float(len(number_list))
