@@ -21,6 +21,8 @@ class TestListOperations(unittest.TestCase):
     def test_1_D_smallest(self):
         self.assertEqual(smallest(self.number_list), -5)
 
+    def test_1_E_largest(self):
+        self.assertEqual(largest(self.number_list), 42)
 """
     def test_1_E_first_three(self):
         self.assertEqual(first_three(self.months), ['Jan', 'Feb', 'Mar'])
