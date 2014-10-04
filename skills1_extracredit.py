@@ -30,19 +30,9 @@ f_sum_numbers = reduce(lambda num1, num2: num1 + num2, number_list)
 # Write a function that multiplies all the numbers in a list together.
 f_mult_numbers = reduce(lambda num1, num2: num1 * num2, number_list)
 
-def mult_numbers(number_list):
-    product = 1
-    for num in number_list:
-        product *= num
-    return product
-
 # Write a function that joins all the strings in a list together (without using the join method) and 
 # returns a single string.
-def join_strings(word_list):
-    newstring = ""
-    for word in word_list:
-        newstring += word
-    return newstring
+f_join_strings = reduce(lambda word1, word2: word1 + word2, word_list)
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):

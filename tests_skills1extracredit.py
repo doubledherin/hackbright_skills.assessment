@@ -36,10 +36,10 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_I_f_mult_numbers(self):
         self.assertEqual(f_mult_numbers, -3115929600)
-"""
-    def test_1_J_join_strings(self):
-        self.assertEqual(join_strings(self.word_list), "WhatabouttheSpamsausagespamspambaconspamtomatoandspam")
 
+    def test_1_J_f_join_strings(self):
+        self.assertEqual(f_join_strings, "WhatabouttheSpamsausagespamspambaconspamtomatoandspam")
+"""
     def test_1_K_average(self):
         self.assertEqual(average(self.number_list), 11.8)
 """
