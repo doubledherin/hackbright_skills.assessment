@@ -35,5 +35,6 @@ f_mult_numbers = reduce(lambda num1, num2: num1 * num2, number_list)
 f_join_strings = reduce(lambda word1, word2: word1 + word2, word_list)
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
+f_average = f_sum_numbers / float(len(number_list))
 def average(number_list):
     return sum_numbers(number_list) / float(len(number_list))

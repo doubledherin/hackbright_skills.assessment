@@ -39,9 +39,9 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_J_f_join_strings(self):
         self.assertEqual(f_join_strings, "WhatabouttheSpamsausagespamspambaconspamtomatoandspam")
-"""
-    def test_1_K_average(self):
-        self.assertEqual(average(self.number_list), 11.8)
-"""
+
+    def test_1_K_f_average(self):
+        self.assertEqual(f_average, 11.8)
+
 if __name__ == '__main__':
     unittest.main()
