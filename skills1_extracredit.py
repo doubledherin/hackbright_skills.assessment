@@ -15,20 +15,8 @@ f_long_words = filter(lambda word: len(word) > 3, word_list)
 # Write a function that finds the smallest element in a list of integers and returns it.
 f_smallest = reduce(lambda num1, num2: num1 if (num1 < num2) else num2, number_list)
 
-def smallest(number_list):
-    mini = number_list[0]
-    for num in number_list:
-        if num < mini:
-            mini = num
-    return mini
-
 # Write a function that finds the largest element in a list of integers and returns it.
-def largest(number_list):
-    maxi = number_list[0]
-    for num in number_list:
-        if num > maxi:
-            maxi = num
-    return maxi
+f_largest = reduce(lambda num1, num2: num1 if (num1 > num2) else num2, number_list)
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):

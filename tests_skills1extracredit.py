@@ -21,10 +21,10 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_D_f_smallest(self):
         self.assertEqual(f_smallest, -5)
-"""
-    def test_1_E_largest(self):
-        self.assertEqual(largest(self.number_list), 42)
 
+    def test_1_E_f_largest(self):
+        self.assertEqual(f_largest, 42)
+"""
     def test_1_F_halvesies(self):
         self.assertEqual(halvesies(self.number_list), [-2.5, 3.0, 2.0, 4.0, 7.5, 8.0, 11.5, 21.0, 1.0, 3.5])
 
