@@ -25,6 +25,7 @@ f_halvesies = map(lambda num: num/2.0, number_list)
 f_word_lengths = map(lambda word: len(word), word_list)
 
 # Write a function (using iteration) that sums all the numbers in a list.
+f_sum_numbers = reduce(lambda num1, num2: num1 + num2, number_list)
 def sum_numbers(number_list):
     total = 0
     for num in number_list:

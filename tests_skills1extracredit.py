@@ -30,10 +30,10 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_G_f_word_lengths(self):
         self.assertEqual(f_word_lengths, [4, 5, 3, 4, 7, 4, 4, 5, 4, 6, 3, 4])
-"""
-    def test_1_H_sum_numbers(self):
-        self.assertEqual(sum_numbers(self.number_list), 118)
 
+    def test_1_H_f_sum_numbers(self):
+        self.assertEqual(f_sum_numbers, 118)
+"""
     def test_1_I_join_strings(self):
         self.assertEqual(join_strings(self.word_list), "WhatabouttheSpamsausagespamspambaconspamtomatoandspam")
 
