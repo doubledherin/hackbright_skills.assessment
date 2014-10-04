@@ -26,28 +26,11 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_F_halvesies(self):
         self.assertEqual(halvesies(self.number_list), [-2.5, 3.0, 2.0, 4.0, 7.5, 8.0, 11.5, 21.0, 1.0, 3.5])
+
+    def test_1_G_word_lengths(self):
+        self.assertEqual(word_lengths(self.word_list), [4, 5, 3, 4, 7, 4, 4, 5, 4, 6, 3, 4])
+
 """
-    def test_1_E_first_three(self):
-        self.assertEqual(first_three(self.months), ['Jan', 'Feb', 'Mar'])
-        self.assertEqual(first_three(self.notes), ['Do', 'Re', 'Mi'])
-        self.assertEqual(first_three(self.multiples), [0, 3, 6])
-
-    def test_1_F_last_five(self):
-        self.assertEqual(last_five(self.months), ['Aug', 'Sep', 'Oct', 'Nov',
-                                                  'Dec'])
-        self.assertEqual(last_five(self.notes), ['Fa', 'So', 'La', 'Ti', 'Do'])
-        self.assertEqual(last_five(self.multiples), [15, 18, 21, 24, 27])
-
-    def test_1_G_middle(self):
-        self.assertEqual(middle(self.months), ['Mar', 'Apr', 'May', 'Jun', 'Jul',
-                                               'Aug', 'Sep', 'Oct'])
-        self.assertEqual(middle(self.notes), ['Mi', 'Fa', 'So', 'La'])
-        self.assertEqual(middle(self.multiples), [6, 9, 12, 15, 18, 21])
-
-    def test_1_H_inner_four(self):
-        self.assertEqual(inner_four(self.months), ['Mar', 'Apr', 'May', 'Jun'])
-        self.assertEqual(inner_four(self.notes), ['Mi', 'Fa', 'So', 'La'])
-        self.assertEqual(inner_four(self.multiples), [6, 9, 12, 15])
 
     def test_1_I_inner_four_end(self):
         self.assertEqual(inner_four_end(self.months), ['Jul', 'Aug', 'Sep',
