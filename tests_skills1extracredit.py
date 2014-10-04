@@ -16,12 +16,12 @@ class TestListOperations(unittest.TestCase):
     def test_1_B_f_all_even(self):
         self.assertEqual(f_all_even, [6, 4, 8, 16, 42, 2])
 
-    def test_1_C_long_words(self):
+    def test_1_C_f_long_words(self):
         self.assertEqual(f_long_words, ["What", "about", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "spam"])
-"""
-    def test_1_D_smallest(self):
-        self.assertEqual(smallest(self.number_list), -5)
 
+    def test_1_D_f_smallest(self):
+        self.assertEqual(f_smallest, -5)
+"""
     def test_1_E_largest(self):
         self.assertEqual(largest(self.number_list), 42)
 

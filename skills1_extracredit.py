@@ -12,14 +12,9 @@ f_all_even = filter(lambda num: num % 2 == 0, number_list)
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 f_long_words = filter(lambda word: len(word) > 3, word_list)
 
-def long_words(word_list):
-    newlist = []
-    for word in word_list:
-        if len(word) >= 4:
-            newlist.append(word)
-    return newlist
-
 # Write a function that finds the smallest element in a list of integers and returns it.
+f_smallest = reduce(lambda num1, num2: num1 if (num1 < num2) else num2, number_list)
+
 def smallest(number_list):
     mini = number_list[0]
     for num in number_list:
