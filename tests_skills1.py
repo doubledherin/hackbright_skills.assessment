@@ -1,22 +1,17 @@
 import unittest
 
-from list_operations import *
+from skills1 import *
 
 class TestListOperations(unittest.TestCase):
 
     def setUp(self):
-        self.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
-                       'Sep', 'Oct', 'Nov', 'Dec']
-        self.notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
-        self.multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+        self.number_list = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
+        self.word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "and", "spam"]
 
-    ### Tests for Part 1 ###
 
-    def test_1_A_head(self):
-        self.assertEqual(head(self.months), 'Jan')
-        self.assertEqual(head(self.notes), 'Do')
-        self.assertEqual(head(self.multiples), 0)
-
+    def test_1_A_all_odd(self):
+        self.assertEqual(all_odd(self.number_list), [-5, 15, 23, 7])
+"""
     def test_1_B_tail(self):
         self.assertEqual(tail(self.months), ['Feb', 'Mar', 'Apr', 'May', 'Jun',
                                              'Jul', 'Aug', 'Sep', 'Oct', 'Nov',
@@ -224,6 +219,6 @@ class TestListOperations(unittest.TestCase):
         self.assertFalse(custom_equality(self.notes, self.notes[::-1]))
         self.assertFalse(custom_equality(self.multiples, [0, 3, 6, 9, 12, 15, 18,
                                                          21, 24]))
-
+"""
 if __name__ == '__main__':
     unittest.main()
