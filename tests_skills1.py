@@ -11,6 +11,9 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_A_all_odd(self):
         self.assertEqual(all_odd(self.number_list), [-5, 15, 23, 7])
+
+    def test_1_A_all_even(self):
+        self.assertEqual(all_even(self.number_list), [6, 4, 8, 16, 42, 2])
 """
     def test_1_B_tail(self):
         self.assertEqual(tail(self.months), ['Feb', 'Mar', 'Apr', 'May', 'Jun',
