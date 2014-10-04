@@ -50,9 +50,7 @@ def halvesies(number_list):
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    newlist = []
-    for word in word_list:
-        newlist.append(len(word))
+    newlist = [len(word) for word in word_list]
     return newlist
 
 # Write a function (using iteration) that sums all the numbers in a list.
