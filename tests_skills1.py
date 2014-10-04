@@ -17,28 +17,11 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_C_long_words(self):
         self.assertEqual(long_words(self.word_list), ["What", "about", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "spam"])
+
+    def test_1_D_smallest(self):
+        self.assertEqual(smallest(self.number_list), -5)
+
 """
-    def test_1_B_tail(self):
-        self.assertEqual(tail(self.months), ['Feb', 'Mar', 'Apr', 'May', 'Jun',
-                                             'Jul', 'Aug', 'Sep', 'Oct', 'Nov',
-                                             'Dec'])
-        self.assertEqual(tail(self.notes), ['Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
-                                            'Do'])
-        self.assertEqual(tail(self.multiples), [3, 6, 9, 12, 15, 18, 21, 24, 27])
-
-    def test_1_C_last(self):
-        self.assertEqual(last(self.months), 'Dec')
-        self.assertEqual(last(self.notes), 'Do')
-        self.assertEqual(last(self.multiples), 27)
-
-    def test_1_D_init(self):
-        self.assertEqual(init(self.months), ['Jan', 'Feb', 'Mar', 'Apr', 'May',
-                                             'Jun', 'Jul', 'Aug', 'Sep', 'Oct',
-                                             'Nov'])
-        self.assertEqual(init(self.notes), ['Do', 'Re', 'Mi', 'Fa', 'So', 'La',
-                                            'Ti'])
-        self.assertEqual(init(self.multiples), [0, 3, 6, 9, 12, 15, 18, 21, 24])
-
     def test_1_E_first_three(self):
         self.assertEqual(first_three(self.months), ['Jan', 'Feb', 'Mar'])
         self.assertEqual(first_three(self.notes), ['Do', 'Re', 'Mi'])
