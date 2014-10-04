@@ -23,6 +23,9 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_E_largest(self):
         self.assertEqual(largest(self.number_list), 42)
+
+    def test_1_F_halvesies(self):
+        self.assertEqual(halvesies(self.number_list), [-2.5, 3.0, 2.0, 4.0, 7.5, 8.0, 11.5, 21.0, 1.0, 3.5])
 """
     def test_1_E_first_three(self):
         self.assertEqual(first_three(self.months), ['Jan', 'Feb', 'Mar'])
