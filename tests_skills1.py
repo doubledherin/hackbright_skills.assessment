@@ -32,6 +32,9 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_H_sum_numbers(self):
         self.assertEqual(sum_numbers(self.number_list), 118)
+
+    def test_1_I_join_strings(self):
+        self.assertEqual(join_strings(self.word_list), "WhatabouttheSpamsausagespamspambaconspamtomatoandspam")
 """
         self.assertEqual(self.months, ['Jan', 'Feb', 42, 37, 'Nov', 'Dec'])
         self.assertEqual(self.notes, ['Do', 'Re', 42, 37, 'Ti', 'Do'])
