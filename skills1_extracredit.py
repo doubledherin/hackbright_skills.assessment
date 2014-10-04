@@ -19,6 +19,8 @@ f_smallest = reduce(lambda num1, num2: num1 if (num1 < num2) else num2, number_l
 f_largest = reduce(lambda num1, num2: num1 if (num1 > num2) else num2, number_list)
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
+f_halvesies = map(lambda num: num/2.0, number_list)
+
 def halvesies(number_list):
     newlist = [num/2.0 for num in number_list]
     return newlist
