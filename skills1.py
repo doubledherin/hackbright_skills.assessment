@@ -45,9 +45,7 @@ def largest(number_list):
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
-    newlist = []
-    for num in number_list:
-        newlist.append(num/2.0)
+    newlist = [num/2.0 for num in number_list]
     return newlist
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
