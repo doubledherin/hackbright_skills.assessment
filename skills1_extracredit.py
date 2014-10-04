@@ -21,14 +21,8 @@ f_largest = reduce(lambda num1, num2: num1 if (num1 > num2) else num2, number_li
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 f_halvesies = map(lambda num: num/2.0, number_list)
 
-def halvesies(number_list):
-    newlist = [num/2.0 for num in number_list]
-    return newlist
-
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
-def word_lengths(word_list):
-    newlist = [len(word) for word in word_list]
-    return newlist
+f_word_lengths = map(lambda word: len(word), word_list)
 
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):

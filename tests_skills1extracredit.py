@@ -27,10 +27,10 @@ class TestListOperations(unittest.TestCase):
 
     def test_1_F_f_halvesies(self):
         self.assertEqual(f_halvesies, [-2.5, 3.0, 2.0, 4.0, 7.5, 8.0, 11.5, 21.0, 1.0, 3.5])
-"""
-    def test_1_G_word_lengths(self):
-        self.assertEqual(word_lengths(self.word_list), [4, 5, 3, 4, 7, 4, 4, 5, 4, 6, 3, 4])
 
+    def test_1_G_f_word_lengths(self):
+        self.assertEqual(f_word_lengths, [4, 5, 3, 4, 7, 4, 4, 5, 4, 6, 3, 4])
+"""
     def test_1_H_sum_numbers(self):
         self.assertEqual(sum_numbers(self.number_list), 118)
 
