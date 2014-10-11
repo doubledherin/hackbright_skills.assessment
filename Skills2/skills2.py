@@ -1,3 +1,5 @@
+import string
+
 string1 = "I do not like green eggs and ham."
 list1 = [2, 5, 12, 6, 1, -5, 8, 5, 6, -2, 2, 27]
 list2 = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
@@ -9,8 +11,45 @@ all distinct elements as the keys, and the number of each element as
 the value
 Bonus: do the same for a file (i.e. twain.txt)
 """
+# Done in 4 minutes.
 def count_unique(string1):
-    pass
+    # Split string into list of words
+    wordlist = string1.split()
+
+    # Initialize an empty dictionary
+    hist = {}
+
+    # Iterate over list of words and check to see if each word is in the dictionary. 
+    # If it's not, add it and increment count.
+    for word in words:
+    	hist[word] = hist.get(word, 0) + 1
+    return hist
+
+#print count_unique(string1)
+
+# Bonus (using a file)
+# Took like 30 minutes because of a Sublime problem
+def count_unique(filename):
+    # Open file and read it in line by line
+    fin = open(filename)
+
+    # Initialize an empty dictionary
+    hist = {}
+
+    # Iterate over list of words and check to see if each word is in the dictionary. 
+    # If it's not, add it and increment count.
+    for line in fin:
+        line = line.replace("-", " ")
+     	words = line.lower().split()
+     	for word in words:
+            word = word.strip(string.punctuation)
+        hist[word] = hist.get(word, 0) + 1
+
+    return hist
+
+	    
+#print count_unique(string1)
+print count_unique("twain.txt")
 
 """
 Given two lists, (without using the keywords 'if __ in ____' or the method 'index')
