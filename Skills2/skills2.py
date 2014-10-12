@@ -290,16 +290,22 @@ def pirate_translator(glossary):
     # Split it into a string.
     english_list = english.split()
 
-    list_sans_punct = []
-
+    # Strip out punctuation in order to be able to look words up
+    # in the glossary.
+    list_sans_punct = []    
     for word in english_list:
         word = word.strip(string.punctuation)
         list_sans_punct.append(word)
     
+    # Look up each word in the dictionary. If it's not there,
+    # add the original word to the new list (translation).
+    # If it is there as a key, add the value to the new list.
     translation = []
     for word in list_sans_punct:
         new_word = d.get(word, word)
         translation.append(new_word)
+
+    # Print it all as a string.    
     return (" ").join(translation)
 
 
