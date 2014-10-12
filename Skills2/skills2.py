@@ -207,9 +207,6 @@ def word_length3(filename):
     # Create a sorted list tuples of the dictionary's keys/values.
     pairs = sorted(d.items())
 
-    # Initialize the empty list we're going to return soon.
-    sorted_words = []
-
     # Append second item in each sorted tuple (i.e., the word)
     for pair in pairs:
         for word in sorted(pair[1]):
