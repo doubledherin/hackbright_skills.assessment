@@ -126,9 +126,26 @@ Given a list of words, print the words in ascending order of length
 Bonus: do it on a file instead of the list provided
 Bonus: print the words in alphabetical order in ascending order of length
 """
-# Started at 4:25
+# Started at 5:15 STOPPED at 5:22, still work to do on this.
 def word_length(words):
-    pass
+    d = {}
+    
+    # Create dictionary where len(word) is key and word is value
+    for word in words:
+        d[len(word)] = d.get(len(word), word).append(word)
+
+    # Create a sorted list tuples of the dictionary's keys/values
+    pairs = sorted(d.items())
+
+    sorted_words = []
+
+    # Append second item in each sorted tuple (i.e., the word)
+    for pair in pairs:
+        sorted_words.append(pair[1])
+
+    return sorted_words
+
+print word_length(words)
 
 """
 Here's a table of English to Pirate translations
