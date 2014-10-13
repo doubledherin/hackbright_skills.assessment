@@ -99,11 +99,12 @@ def sum_zero(list1):
     d = {}
 
     for num in list1:
-        if num * -1 in list1:
-            d[num] = d.get(num, 0)
-    return d.keys()
+        neg = num * -1
+        if neg in list1:
+            d[num] = d.get(num, neg)
+    return d
 
-#print sum_zero(list1)
+print sum_zero(list1)
 
 
 
