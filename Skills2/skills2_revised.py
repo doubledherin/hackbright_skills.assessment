@@ -41,9 +41,24 @@ Given two lists, (without using the keywords 'if __ in ____' or the method 'inde
 return a list of all common items shared between both lists
 """
 def common_items(list1, list2):
-	set1, set2 = set(list1), set(list2)
-	common_elems = set1 & set2
-	return list(common_elems)
+	# Create empty list to return later
+	newlist = []
+
+	# Iterate and compare over each list
+	for item1 in list1:
+		for item2 in list2:
+			# If there's a match...
+			if item1 == item2:
+				# Add it to the new list
+				newlist.append(item1)
+				# Remove it from the two input lists to
+				# help avoid duplicates in the new list
+				# (not a perfect solution; I'd have to 
+				# deduplicate each list first but ...)
+				list1.remove(item1)
+				list2.remove(item2)
+	return newlist
+			 
 
 #print common_items(list1, list2)
 
@@ -109,12 +124,22 @@ Bonus: print the words in alphabetical order in ascending order of length
 def word_length(words):
 	d = {}
 	for word in words:
-		d[word] = d.get(word, len(word))
-
+		#d[word] = d.get(word, len(word))
+		d[word] = len(word)
 	for word, length in sorted(d.items(), key=lambda x: x[1]):
 		print word
 
-word_length(words)
+#print word_length(words)
+
+def word_length2(words):
+	d = {}
+	for word in words:
+		#d[word] = d.get(word, len(word))
+		d[word] = len(word)
+	for word, length in sorted(d.items(), key=lambda x: x[1]):
+		print word
+
+print word_length2(words)
 
 import string
 

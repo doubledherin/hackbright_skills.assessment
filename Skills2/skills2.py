@@ -55,12 +55,25 @@ return a list of all common items shared between both lists
 """
 # Took 10 minutes
 def common_items(list1, list2):
-    set1, set2 = set(list1), set(list2)
-    common_set = set1.intersection(set2)
-    common_list = list(common_set)
-    return common_list
+    # Create empty list to return later
+    newlist = []
 
-# print common_items(list1, list2)
+    # Iterate and compare over each list
+    for item1 in list1:
+        for item2 in list2:
+            # If there's a match...
+            if item1 == item2:
+                # Add it to the new list
+                newlist.append(item1)
+                # Remove it from the two input lists to
+                # help avoid duplicates in the new list
+                # (not a perfect solution; I'd have to 
+                # deduplicate each list first but ...)
+                list1.remove(item1)
+                list2.remove(item2)
+    return newlist
+
+#print common_items(list1, list2)
 
 """
 Given two lists, (without using 'if __ in ____' or 'index')
@@ -89,7 +102,7 @@ def common_items2(list1, list2):
 
     return common_list
 
-# print common_items2(list1, list2)
+print common_items2(list1, list2)
 """
 Given a list of numbers, return list of number pairs that sum to zero
 """
@@ -104,7 +117,7 @@ def sum_zero(list1):
             d[num] = d.get(num, neg)
     return d
 
-print sum_zero(list1)
+#print sum_zero(list1)
 
 
 
@@ -307,5 +320,5 @@ def pirate_translator(glossary):
     return (" ").join(translation)
 
 
-print pirate_translator(glossary)
+#print pirate_translator(glossary)
 
