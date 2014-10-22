@@ -45,7 +45,12 @@ def connect_to_db():
 # Remember: Our telemarketers should only be calling customers
 #           who have placed orders of 20 melons or more.
 def get_next_customer():
-	query = """SELECT * FROM Customers WHERE called='' LIMIT 1"""	
+	# query = """SELECT * FROM Customers WHERE called='' LIMIT 1"""
+	query = """SELECT * FROM Customers 
+	           JOIN Orders ON Customers.customer_id=Orders.customer_id 
+	           WHERE (called='') AND (num_watermelons > 20)
+	           LIMIT 1
+	        """	
 	DB.execute(query)
 	row = DB.fetchone()
 	id, first, last, telephone = row[0], row[1], row[2], row[4]
@@ -58,7 +63,7 @@ def display_next_to_call(customer):
 	print "---------------------"
 	print "Next Customer to call"
 	print "---------------------\n"
-	print customer
+	print customer, "id:", customer.id
 	print "%s %s: %s" % (customer.first, customer.last, customer.telephone)
 	print "\n"
 
