@@ -10,7 +10,7 @@ call.py - Telemarketing script that displays the next name
 """
 
 import sqlite3
-from datetime import date 
+from datetime import datetime, date 
 
 
 CONN = None
@@ -45,19 +45,29 @@ def connect_to_db():
 # Remember: Our telemarketers should only be calling customers
 #           who have placed orders of 20 melons or more.
 def get_next_customer():
-	# query = """SELECT * FROM Customers WHERE called='' LIMIT 1"""
+
+	#get string version of today's datestamp
+	today = date.today().strftime("%m/%d/%y")
+
+	# convert that intl a 5-item tuple for later
+	today = datetime.strptime(today, "%m/%d/%y")
+
+	# get date of next person who has ordered more than 20 watermelons
+	# disregarding whether they have been called (return value could be '')
 	query = """SELECT * FROM Customers 
 	           JOIN Orders ON Customers.customer_id=Orders.customer_id 
-	           WHERE (called='') AND (num_watermelons > 20)
+	           WHERE (called = '') AND (num_watermelons > 20) 
 	           LIMIT 1
 	        """	
 	DB.execute(query)
-	row = DB.fetchone()
-	id, first, last, telephone = row[0], row[1], row[2], row[4]
-	c = Customer(id, first, last, telephone)
-	print "debug", c.id
-	return c
+	rows = DB.fetchall()
 
+	for row in rows:
+		print "DATE CALLED?", row[5]
+		id, first, last, telephone = row[0], row[1], row[2], row[4]
+		c = Customer(id, first, last, telephone)
+		print "debug", c.id
+		return c
 
 def display_next_to_call(customer):
 	print "---------------------"
@@ -95,8 +105,10 @@ def main():
 
 		if user_answer.lower() == 'y':
 			update_customer_called(customer)
-		else:
+		elif user_answer.lower() == 'quit':
 			done = True
+		else:
+			continue
 
 
 if __name__ == '__main__':
